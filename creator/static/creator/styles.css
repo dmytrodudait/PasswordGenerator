@@ -1,0 +1,40 @@
+.password {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cube {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-2.4rem);
+    transition: transform 1s;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.cube.show-front {
+    transform: translateZ(-2.4rem) rotateY(0deg);
+}
+
+.cube.show-bottom {
+    transform: translateZ(-2.4rem) rotateX(90deg);
+}
+
+.face {
+    position: absolute;
+    width: 3rem;
+    border: 2px solid black;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(2.4rem);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(2.4rem);
+}
